@@ -447,5 +447,3 @@ int flush_encoder(AVFormatContext *fmt_ctx,unsigned int stream_index)
     return ret;
 }
 ```
-
-Clang的个人主页：[https://www.clang.monster](https://www.clang.monster)

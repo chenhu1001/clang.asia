@@ -21,5 +21,3 @@ tags: [分享,IDEA]
 勾选项：Auto reset before per restart 如果勾选了，则自勾选后每次重启/退出 IDE 时会自动重置试用信息，你无需做额外的事情。（此为自动重置方式，推荐此方法！）
 ## 4.中文汉化方法
 安装中文插件后重启IDE即可：插件中搜索chinese进行安装
-
-Clang的个人主页：[https://www.clang.monster](https://www.clang.monster)

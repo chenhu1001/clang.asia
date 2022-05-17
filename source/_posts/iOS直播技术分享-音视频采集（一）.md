@@ -167,5 +167,3 @@ _gpuImageView = [[GPUImageView alloc] initWithFrame:[UIScreen mainScreen].bounds
 [_gpuImageView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
         [_gpuImageView setInputRotation:kGPUImageFlipHorizonal atIndex:0];
 ```
-
-Clang的个人主页：[https://www.clang.monster](https://www.clang.monster)

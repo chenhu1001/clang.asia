@@ -52,5 +52,3 @@ public class CorsConfig {
 }
 ```
 注意：网关加上跨域之后，在各个微服务对应的Controller上就不需要加@CrossOrigin跨域支持了。
-
-Clang的个人主页：[https://www.clang.monster](https://www.clang.monster)

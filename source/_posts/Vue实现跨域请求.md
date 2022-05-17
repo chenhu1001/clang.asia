@@ -87,5 +87,3 @@ location /ticketManagement/ {
     proxy_set_header Host $http_host;
 }
 ```
-
-Clang的个人主页：[https://www.clang.monster](https://www.clang.monster)

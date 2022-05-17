@@ -94,5 +94,3 @@ func Printf(format string, a ...interface{}) (n int) {
 	return Fprintf(os.Stdout, format, a...)
 }
 ```
-
-Clang的个人主页：[https://www.clang.monster](https://www.clang.monster)

@@ -71,5 +71,3 @@ func main()  {
 }
 ```
 运行输出：Hello World!
-
-Clang的个人主页：[https://www.clang.monster](https://www.clang.monster)

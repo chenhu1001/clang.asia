@@ -151,5 +151,3 @@ hexo version&emsp;&emsp;&emsp;//查看Hexo的版本
 文章在source/_posts下，支持Markdown语法，可以用Markdown编辑器进行编辑，如果想修改头像可以直接在主题的_config.yml文件里面修改，友情链接之类的都在这里，开始打理你的博客吧，有什么问题或者建议，都可以提出来，我会继续完善的。  
 ## Markdown语法 
 [实用的Markdown语法例子](https://www.zybuluo.com/mdeditor)
-
-Clang的个人主页：[https://www.clang.monster](https://www.clang.monster)

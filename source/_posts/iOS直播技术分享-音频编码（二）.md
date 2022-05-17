@@ -89,5 +89,3 @@ if(!aacBuf){
     exeData[1] = _configuration.asc[1];
     audioFrame.audioInfo =[NSData dataWithBytes:exeData length:2];
 ```
-
-Clang的个人主页：[https://www.clang.monster](https://www.clang.monster)

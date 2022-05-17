@@ -206,5 +206,3 @@ spring:
           predicates:
             - Path=/shopTrade/**,/goods/**,/cost/**
 ```
-
-Clang的个人主页：[https://www.clang.monster](https://www.clang.monster)

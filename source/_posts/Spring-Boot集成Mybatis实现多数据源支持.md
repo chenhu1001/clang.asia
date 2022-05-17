@@ -235,5 +235,3 @@ public class ClusterDataSourceConfig {
 ```
 &emsp;&emsp;上面数据配置分别扫描 Mapper 接口，com.clang.dao.master（对应 xml classpath:mapper/master ） 和 com.clang.dao.cluster（对应 xml classpath:mapper/cluster ） 包中对应的 UserDAO 和 CityDAO 。 都有 @Mapper 标志为 Mybatis 的并通过容器管理的 Bean。Mybatis 内部会使用反射机制运行去解析相应 SQL。
 [代码下载](https://gitee.com/chenhu1001/multiple-datasource.git)  
-
-Clang的个人主页：[https://www.clang.monster](https://www.clang.monster)

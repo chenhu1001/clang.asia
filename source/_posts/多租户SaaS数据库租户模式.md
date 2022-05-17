@@ -129,4 +129,3 @@ SQL 数据库提供一个可与分片库和目录数据库结合使用的拆分/
 | 操作复杂性 | 低到高。 单个操作较简单，大规模操作较复杂。 |低到中等。 模式可以解决大规模操作的复杂性。  | 低到高。 单个租户的管理比较复杂。 | 
 
 原文链接：https://docs.microsoft.com/en-us/azure/azure-sql/database/saas-tenancy-app-design-patterns  
-Clang的个人主页：[https://www.clang.monster](https://www.clang.monster)

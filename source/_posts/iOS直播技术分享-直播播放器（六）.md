@@ -153,4 +153,3 @@ IJKFF_Pipeline *ffpipeline_create_from_ios(FFPlayer *ffp)
 至此已经完成了ijkplayer播放器初始化的相关流程，简单来说，就是创建播放器对象，完成音视频解码、渲染的准备工作。
   
 作者金山视频云，首发简书 [Jianshu.com](https://www.jianshu.com/p/daf0a61cc1e0 )  
-Clang的个人主页：[https://www.clang.monster](https://www.clang.monster)

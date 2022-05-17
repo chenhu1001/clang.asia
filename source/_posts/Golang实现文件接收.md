@@ -131,5 +131,3 @@ func main() {
 	postFile(path, target_url)
 }
 ```
-
-Clang的个人主页：[https://www.clang.monster](https://www.clang.monster)

@@ -55,5 +55,3 @@ ICE,STUN,TURN 传统 CDN 没有类似的服务提供
 开发成本高
 CDN 不友好，需要自建 CDN 或者和 CDN 达成协议
 独立作战，无法和社区一起演进
-
-Clang的个人主页：[https://www.clang.monster](https://www.clang.monster)
