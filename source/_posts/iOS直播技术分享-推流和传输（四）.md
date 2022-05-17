@@ -13,7 +13,7 @@ RTMP
 WebRTC
 基于 UDP 的私有协议
 
-1. RTMP
+## 1、RTMP
 
 RTMP 是 Real Time Messaging Protocol（实时消息传输协议）的首字母缩写。该协议基于 TCP，是一个协议族，包括 RTMP 基本协议及 RTMPT/RTMPS/RTMPE 等多种变种。RTMP 是一种设计用来进行实时数据通信的网络协议，主要用来在 Flash/AIR 平台和支持 RTMP 协议的流媒体/交互服务器之间进行音视频和数据通信。支持该协议的软件包括 Adobe Media Server/Ultrant Media Server/red5 等。
 RTMP 是目前主流的流媒体传输协议，广泛用于直播领域，可以说市面上绝大多数的直播产品都采用了这个协议。
@@ -27,7 +27,7 @@ CDN 支持良好，主流的 CDN 厂商都支持
 不支持浏览器推送
 Adobe 私有协议，Adobe 已经不再更新
 
-2. WebRTC
+## 2、WebRTC
 
 WebRTC，名称源自网页即时通信（英语：Web Real-Time Communication）的缩写，是一个支持网页浏览器进行实时语音对话或视频对话的 API。它于 2011 年 6 月 1 日开源并在 Google、Mozilla、Opera 支持下被纳入万维网联盟的 W3C 推荐标准。
 
@@ -44,7 +44,7 @@ Google 在背后支撑，并在各平台有参考实现
 缺点
 ICE,STUN,TURN 传统 CDN 没有类似的服务提供
 
-3. 基于 UDP 的私有协议
+## 3、基于 UDP 的私有协议
 
 有些直播应用会使用 UDP 做为底层协议开发自己的私有协议，因为 UDP 在弱网环境下的优势通过一些定制化的调优可以达到比较好的弱网优化效果，但同样因为是私有协议也势必有现实问题：
 

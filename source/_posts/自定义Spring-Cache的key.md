@@ -4,7 +4,8 @@ date: 2019-06-22 15:38:10
 categories: Java
 tags: [Java,Spring Cache]
 ---
-1、继承RedisCacheManager
+在多租户系统中，为了统一处理系统缓存，需在缓存组件中加上租户Id，以下是自定义自定义Spring Cache的key步骤。
+## 1、继承RedisCacheManager
 
 ```
 public class RedisAutoCacheManager extends RedisCacheManager {
@@ -23,7 +24,7 @@ public class RedisAutoCacheManager extends RedisCacheManager {
     }
 }
 ```
-2、在Spring Boot启动类中注入容器
+## 2、在Spring Boot启动类中注入容器
 ```
 @Bean
 public RedisCacheManager cacheManager(RedisConnectionFactory redisConnectionFactory) {
@@ -39,7 +40,7 @@ public RedisCacheManager cacheManager(RedisConnectionFactory redisConnectionFact
     return new RedisAutoCacheManager(redisCacheWriter, defaultCacheConfig);
 }
 ```
-3、租户类
+## 3、租户类
 ```
 public class TenantContextHolder {
 

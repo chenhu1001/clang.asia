@@ -4,6 +4,7 @@ date: 2022-04-25 09:49:14
 categories: Java
 tags: [Java,Spring Cloud,Spring Cloud Gateway]
 ---
+在Spring Cloud Gateway中GlobalFilter可以方便的全局拦截或统计，有时候希望在某些路由中可以跳过GlobalFilter，可以通过GatewayFilter与GlobalFilter组合来实现。
 ## 1、全局过滤器GlobalFilter
 详细代码如下：
 
