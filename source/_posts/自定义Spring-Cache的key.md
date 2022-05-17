@@ -5,7 +5,7 @@ categories: Java
 tags: [Java,Spring Cache]
 ---
 1、继承RedisCacheManager
-<!--more-->
+
 ```
 public class RedisAutoCacheManager extends RedisCacheManager {
     public RedisAutoCacheManager(RedisCacheWriter cacheWriter, RedisCacheConfiguration defaultCacheConfiguration) {

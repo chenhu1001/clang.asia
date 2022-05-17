@@ -11,7 +11,7 @@ tags: [Golang]
 | chan          | else               |   goto      |  package        | switch|
 | const         | fallthrough     | if              | range           |   type|
 | continue    | for                  | import     | return            |  var |
-<!--more-->
+
 ## Go注释方法
 - // 单行注释
 - /* */ 多行注释

@@ -5,7 +5,7 @@ categories: Golang
 tags: [Golang]
 ---
 前段时间遇到一个问题，在只有nginx的情况下，实现文件的上传，突然想着利用Golang可以非常简单的来实现。分为两个部分：服务端和客户端。代码如下所示：  
-<!--more-->
+
 服务端：
 ```
 package main

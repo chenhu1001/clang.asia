@@ -1,14 +1,13 @@
 ---
 title: ARC下内存泄露总结
-date: 2016-06-20 14:04:08
+date: 2016-05-17 20:04:16
 categories: iOS
 tags: [iOS]
 ---
 ## 1、Block的循环引用
-&emsp;&emsp;在iOS4.2时，Apple推出ARC内存管理机制。这是一种编译期的内存管理方式，在编译期间，编译器会判断对象的引用情况，并在合适的位置加上retain和release，使得对象的内存被合理的管理。所以，从本质上说ARC和MRC在本质上是一样的，都是通过引用计数的内存管理方式。  
-&emsp;&emsp;使用ARC虽然可以简化内存管理，但是ARC并不是万能的，有些情况程序为了能够正常运行，会隐式地持有或者复制对象，如果不加以注意，便会造成内存泄露。在ARC下，当Block获取到外部变量时，由于编译器无法预测获取到的变量何时会被突然释放，为了保证程序能够正确运行，让Block持有获取到的变量。  
-<!--more-->
-&emsp;&emsp;下面主要通过一个例子来介绍在ARC情况下使用Block不当会导致内存泄露的问题。示例代码来源于《Effective Objective-C 2.0》（编写高质量iOS与OS X代码的52个有效方法）。  
+在iOS4.2时，Apple推出ARC内存管理机制。这是一种编译期的内存管理方式，在编译期间，编译器会判断对象的引用情况，并在合适的位置加上retain和release，使得对象的内存被合理的管理。所以，从本质上说ARC和MRC在本质上是一样的，都是通过引用计数的内存管理方式。  
+使用ARC虽然可以简化内存管理，但是ARC并不是万能的，有些情况程序为了能够正常运行，会隐式地持有或者复制对象，如果不加以注意，便会造成内存泄露。在ARC下，当Block获取到外部变量时，由于编译器无法预测获取到的变量何时会被突然释放，为了保证程序能够正确运行，让Block持有获取到的变量。  
+下面主要通过一个例子来介绍在ARC情况下使用Block不当会导致内存泄露的问题。示例代码来源于《Effective Objective-C 2.0》（编写高质量iOS与OS X代码的52个有效方法）。  
 （1）EOCNetworkFetcher.h
 
 ```
@@ -92,8 +91,9 @@ typedef void (^EOCNetworkFetcherCompletionHandler)(NSData *data);
 > * 而EOCClass实例通过strong实例变量保留了EOCNetworkFetcher，最后EOCNetworkFetcher实例对象又保留了handler块。
 
 引用关系如下下图所示
-![循环引用示意图](https://cdn.clang.asia/blog/2016/ARC%E4%B8%8B%E5%86%85%E5%AD%98%E6%B3%84%E9%9C%B2%E6%80%BB%E7%BB%93_1.png)
-  
+![ARC下内存泄露总结_1.png](https://cdn.clang.asia/blog/2016/ARC%E4%B8%8B%E5%86%85%E5%AD%98%E6%B3%84%E9%9C%B2%E6%80%BB%E7%BB%93_1.png)
+
+
 要想打破保留环，解决办法：
 
 > * 方法一：使用完EOCNetworkFetcher对象之后就没有必要在保留该对象了，在block里面将对象释放即可打破保留环。
@@ -208,7 +208,7 @@ warning: performSelector may cause a leak because its selector is unknow [-Warc-
 
 ## 4、循环引用
 A有个属性B，B有个属性A，如果都是strong修饰的话，两个对象都无法释放。   
-这种问题常发生于把delegate声明为strong属性了。 
+这种问题常发生于把delegate声明为strong属性了。
 
 ```
 @interface SampleViewController
@@ -230,7 +230,7 @@ tansition.repeatCount = HUGE_VALL;
 [self.view.layer addAnimation:transition forKey:"myAnimation"];
 ```
 
-上例中，animation重复次数设成HUGE_VALL，一个很大的数值，基本上等于无限循环了。 
+上例中，animation重复次数设成HUGE_VALL，一个很大的数值，基本上等于无限循环了。
 解决办法是，在ViewController关掉的时候，停止这个animation。
 
 ```
@@ -244,5 +244,3 @@ ARC是自动检测objc对象的，非objc对象就无能为力了，比如C或C+
 C语言使用malloc开辟，free释放。  
 C++使用new开辟，delete释放。  
 但是在ARC下，不会添加非objc对象释放语句，如果没去释放，也会造成内存泄露。
-
-Clang的个人主页：[https://www.clang.monster](https://www.clang.monster)

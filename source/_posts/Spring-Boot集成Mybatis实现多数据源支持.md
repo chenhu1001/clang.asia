@@ -5,11 +5,11 @@ categories: Java
 tags: [Java,Spring Boot,Mybatis]
 ---
 ## 1、背景
-&emsp;&emsp;在实际项目开发过程中，时不时会遇到多数据源的情况，本文详细介绍下Spring Boot集成Mybatis实现多数据源支持。
+在实际项目开发过程中，时不时会遇到多数据源的情况，本文详细介绍下Spring Boot集成Mybatis实现多数据源支持。
 ## 2、集成过程
 ### 工程结构
-&emsp;&emsp;首先代码工程结构如下： org.spring.springboot.config.datasource 包含了多数据源的配置，同样有第三个数据源，按照前几个复制即可；resources/mapper目录下面有两个模块，分别是 Mybatis 不同数据源需要扫描的mapper.xml 目录。
-<!--more-->
+首先代码工程结构如下： org.spring.springboot.config.datasource 包含了多数据源的配置，同样有第三个数据源，按照前几个复制即可；resources/mapper目录下面有两个模块，分别是 Mybatis 不同数据源需要扫描的mapper.xml 目录。
+
 ```java
 ├── pom.xml
 └── src
@@ -184,8 +184,8 @@ public class MasterDataSourceConfig {
     }
 }
 ```
-&emsp;&emsp;@Primary 标志这个 Bean 如果在多个同类 Bean 候选时，该 Bean 优先被考虑。「多数据源配置的时候注意，必须要有一个主数据源，用 @Primary 标志该 Bean」 @MapperScan 扫描 Mapper 接口并容器管理，包路径精确到 master，为了和下面 cluster 数据源做到精确区分 @Value 获取全局配置文件 application.properties 的 kv 配置,并自动装配 sqlSessionFactoryRef 表示定义了 key ，表示一个唯一 SqlSessionFactory 实例。
-&emsp;&emsp;同理可得，从数据源 ClusterDataSourceConfig 配置如下：
+@Primary 标志这个 Bean 如果在多个同类 Bean 候选时，该 Bean 优先被考虑。「多数据源配置的时候注意，必须要有一个主数据源，用 @Primary 标志该 Bean」 @MapperScan 扫描 Mapper 接口并容器管理，包路径精确到 master，为了和下面 cluster 数据源做到精确区分 @Value 获取全局配置文件 application.properties 的 kv 配置,并自动装配 sqlSessionFactoryRef 表示定义了 key ，表示一个唯一 SqlSessionFactory 实例。
+同理可得，从数据源 ClusterDataSourceConfig 配置如下：
 
 ```java
 @Configuration
@@ -233,5 +233,5 @@ public class ClusterDataSourceConfig {
     }
 }
 ```
-&emsp;&emsp;上面数据配置分别扫描 Mapper 接口，com.clang.dao.master（对应 xml classpath:mapper/master ） 和 com.clang.dao.cluster（对应 xml classpath:mapper/cluster ） 包中对应的 UserDAO 和 CityDAO 。 都有 @Mapper 标志为 Mybatis 的并通过容器管理的 Bean。Mybatis 内部会使用反射机制运行去解析相应 SQL。
+上面数据配置分别扫描 Mapper 接口，com.clang.dao.master（对应 xml classpath:mapper/master ） 和 com.clang.dao.cluster（对应 xml classpath:mapper/cluster ） 包中对应的 UserDAO 和 CityDAO 。 都有 @Mapper 标志为 Mybatis 的并通过容器管理的 Bean。Mybatis 内部会使用反射机制运行去解析相应 SQL。
 [代码下载](https://gitee.com/chenhu1001/multiple-datasource.git)  

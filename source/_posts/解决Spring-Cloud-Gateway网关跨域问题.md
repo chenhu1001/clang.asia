@@ -6,7 +6,7 @@ tags: [Java,Spring Cloud Gateway,跨域]
 ---
 今天前端突然说接口不支持跨域了，马上排查了一番，原因是之前接口一直提供给App使用的，所以不存在跨域的问题。
 解决方案就是在网关处新增配置类：
-<!--more-->
+
 ```java
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

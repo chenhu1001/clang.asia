@@ -13,7 +13,7 @@ git clone https://git.ffmpeg.org/ffmpeg.git
 ```
 
 2、配置./configure选项，这个要注意需要设置对macOS最低版本的要求，否则是默认当前本机的最新系统如，这样的话在使用库的时候，如果是APP要运行在10.10及之下的系统时候，就会报错。
-<!--more-->
+
 
 ```
 --extra-cflags=-mmacosx-version-min=10.8 --extra-ldflags=-mmacosx-version-min=10.8

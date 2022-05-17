@@ -7,7 +7,7 @@ tags: [分享,IDEA]
 目前Jetbrains系列软件的激活方式为通过插件进行30天试用期重置的方式，其他方式都已经失效
 ## 1、关于下载
 安装包可以直接到官方网站下载 https://www.jetbrains.com/idea/download/ 下载版本2021.1
-<!--more-->
+
 ## 2、IDE Eval Reset 重置试用期插件
 安装方法：
 (1)、运行软件，点击试用，进入到软件创建新项目窗口；

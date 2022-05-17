@@ -5,7 +5,7 @@ categories: 随笔
 tags: [随笔,Github,Hexo]
 ---
 经过各种找资料，踩过各种坑，终于搭建好了hexo，域名目前用的是github的，我的hexo是3.2.2版本，hexo不同的版本，很多配置都不一样。好吧，废话不多说了，开始吧。  
-<!--more-->
+
 ## 正文
 这篇教程是针对Mac的，之前是想着写博客，一方面是给自己做笔记，可以提升自己的写作、总结能力。一个技术点我们会使用，并不难，但是要做到让别人也能听懂，还是需要一定的技巧和经验的。很多类似于CSDN、博客园也都可以写文章，但是页面的样式我不是太喜欢，简书还算好点（我的文章在简书上也有同步）。最近看到一些大神们的博客，貌似都是用hexo写的，我也依葫芦画瓢的搭建了一个。不啰嗦了，直接上搭建步骤。
 ## 配置环境
@@ -137,16 +137,20 @@ hexo deploy
 
 还可以将上面的3个命令封装成一个shell脚本（publish.sh），放在Hexo对应的目录下方便上传部署。
 ### 一些常用命令：  
-hexo new "postName"&emsp;&emsp;&emsp;//新建文章  
-hexo new page "pageName"&emsp;&emsp;&emsp;//新建页面  
-hexo generate&emsp;&emsp;&emsp;//生成静态页面至public目录  
-hexo server&emsp;&emsp;&emsp;//开启预览访问端口（默认端口4000，'ctrl + c'关闭server）  
-hexo deploy&emsp;&emsp;&emsp;//将Hexo部署到GitHub  
-hexo help&emsp;&emsp;&emsp;//查看帮助  
-hexo version&emsp;&emsp;&emsp;//查看Hexo的版本   
-&emsp\;&emsp\;&emsp;&emsp;&emsp;//段落前空两格(为了显示，没有转移符) 
-<!-\-more-\-\>&emsp;&emsp;&emsp;//用于文章的隔断，显示更多  
-[iOS,WebRTC,直播,FFMpeg]&emsp;&emsp;&emsp;//用于写文章时增加tag
+
+```
+hexo new "postName"   //新建文章  
+hexo new page "pageName"   //新建页面  
+hexo generate   //生成静态页面至public目录  
+hexo server   //开启预览访问端口（默认端口4000，'ctrl + c'关闭server）  
+hexo deploy   //将Hexo部署到GitHub  
+hexo help   //查看帮助  
+hexo version   //查看Hexo的版本   
+&emsp;&emsp;   //段落前空两格(为了显示，没有转移符) 
+<!--more-->   //用于文章的隔断，显示更多  
+[iOS,WebRTC,直播,FFMpeg]   //用于写文章时增加tag
+```
+
 ### 一些基本路径  
 文章在source/_posts下，支持Markdown语法，可以用Markdown编辑器进行编辑，如果想修改头像可以直接在主题的_config.yml文件里面修改，友情链接之类的都在这里，开始打理你的博客吧，有什么问题或者建议，都可以提出来，我会继续完善的。  
 ## Markdown语法 

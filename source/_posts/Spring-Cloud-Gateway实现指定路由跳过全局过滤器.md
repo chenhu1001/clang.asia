@@ -6,7 +6,7 @@ tags: [Java,Spring Cloud,Spring Cloud Gateway]
 ---
 ## 1、全局过滤器GlobalFilter
 详细代码如下：
-<!--more-->
+
 ```java
 package com.chanjet.dsf.web.filter;
 
