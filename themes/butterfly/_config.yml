@@ -8,8 +8,8 @@ menu:
 #   分类: /categories/ || fas fa-folder-open
 #   标签: /tags/ || fas fa-tags
    后端||fas fa-list:
-      Java: /categories/Java || fas fa-code
-      Golang: /categories/Golang || fas fa-code
+      Java: /categories/Java || fas fa-compass
+      Golang: /categories/Golang || fas fa-cloud
    前端: /categories/前端 || fas fa-code
    音视频: /categories/音视频 || fas fa-video-camera
    分享: /categories/分享 || fas fa-share
@@ -87,7 +87,7 @@ favicon: /img/favicon.png
 
 # Avatar (頭像)
 avatar:
-  img: https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png
+  img: https://cdn.clang.asia/blog/avatar.jpg
   effect: false
 
 # Disable all banner image
@@ -634,12 +634,12 @@ aside:
     description:
     button:
       enable: true
-      icon: fab fa-github
-      text: Follow Me
+      icon: fas fa-link
+      text: 落叶随风
       link: https://www.clang.monster
   card_announcement:
     enable: true
-    content: This is my Blog
+    content: 如果尚未看到成果，那是因为付出的努力还不够多，如果尚未梦想成真，那是因为等待的时间还不够久。笑到最后的人永远最精彩，最成功，最执着。
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
