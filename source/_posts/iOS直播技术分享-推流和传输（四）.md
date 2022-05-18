@@ -1,6 +1,7 @@
 ---
 title: iOS直播技术分享-推流和传输（四）
 date: 2016-10-25 14:06:58
+cover: https://cdn.clang.asia/blog/cover.jpg
 categories: 音视频
 tags: [音视频,iOS]
 ---

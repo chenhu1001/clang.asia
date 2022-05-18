@@ -1,6 +1,7 @@
 ---
 title: iOS使用第三方工具（RegexKitLite）实现正则表达式
 date: 2016-05-17 20:04:40
+cover: https://cdn.clang.asia/blog/cover.jpg
 categories: iOS
 tags: [iOS]
 ---

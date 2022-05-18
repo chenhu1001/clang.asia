@@ -1,6 +1,7 @@
 ---
 title: iOS直播技术分享-延迟优化（五）
 date: 2016-10-25 14:07:10
+cover: https://cdn.clang.asia/blog/cover.jpg
 categories: 音视频
 tags: [音视频,iOS]
 ---

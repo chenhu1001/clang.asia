@@ -1,6 +1,7 @@
 ---
 title: ARC下内存泄露总结
 date: 2016-05-17 20:04:16
+cover: https://cdn.clang.asia/blog/cover.jpg
 categories: iOS
 tags: [iOS]
 ---

@@ -1,6 +1,7 @@
 ---
 title: 函数式响应式编程（FRP）的基本理解
 date: 2016-05-17 20:04:10
+cover: https://cdn.clang.asia/blog/cover.jpg
 categories: iOS
 tags: [iOS]
 ---

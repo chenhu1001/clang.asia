@@ -1,6 +1,7 @@
 ---
 title: iOS直播技术分享-直播播放器（六）
 date: 2016-10-25 14:07:25
+cover: https://cdn.clang.asia/blog/cover.jpg
 categories: 音视频
 tags: [音视频,iOS,播放器]
 ---

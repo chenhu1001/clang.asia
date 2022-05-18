@@ -1,6 +1,7 @@
 ---
 title: UML类图几种关系的总结
 date: 2016-05-17 19:58:50
+cover: https://cdn.clang.asia/blog/cover.jpg
 categories: 设计模式
 tags: [Java,设计模式]
 ---

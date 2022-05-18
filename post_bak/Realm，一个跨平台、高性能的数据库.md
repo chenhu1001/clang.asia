@@ -1,6 +1,7 @@
 ---
 title: Realm，一个跨平台、高性能的数据库
 date: 2016-05-17 20:04:04
+cover: https://cdn.clang.asia/blog/cover.jpg
 categories: iOS
 tags: [iOS]
 ---

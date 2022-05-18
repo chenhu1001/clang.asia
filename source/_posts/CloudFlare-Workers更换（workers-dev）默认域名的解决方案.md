@@ -1,6 +1,7 @@
 ---
 title: CloudFlare Workers更换（workers.dev）默认域名的解决方案
 date: 2022-05-18 16:48:14
+cover: https://cdn.clang.asia/blog/cover.jpg
 categories: 分享
 tags: [分享,CDN]
 ---

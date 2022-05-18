@@ -1,6 +1,7 @@
 ---
 title: IntelliJ IDEA 2021.1激活步骤
 date: 2021-12-15 17:25:22
+cover: https://cdn.clang.asia/blog/cover.jpg
 categories: 分享
 tags: [分享,IDEA]
 ---

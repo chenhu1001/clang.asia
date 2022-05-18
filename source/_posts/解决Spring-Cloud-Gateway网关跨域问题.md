@@ -1,6 +1,7 @@
 ---
 title: 解决Spring Cloud Gateway网关跨域问题
 date: 2022-04-21 15:26:30
+cover: https://cdn.clang.asia/blog/cover.jpg
 categories: Java
 tags: [Java,Spring Cloud Gateway,跨域]
 ---

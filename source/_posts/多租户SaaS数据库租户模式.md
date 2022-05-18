@@ -1,6 +1,7 @@
 ---
 title: 多租户SaaS数据库租户模式
 date: 2021-12-21 14:43:01
+cover: https://cdn.clang.asia/blog/cover.jpg
 categories: Java
 tags: [多租户,SaaS]
 ---
