@@ -33,8 +33,6 @@ WebRTC，名称源自网页即时通信（英语：Web Real-Time Communication�
 
 目前主要应用于视频会议和连麦中，协议分层如下：
 
-
-
 优点
 W3C 标准，主流浏览器支持程度高
 Google 在背后支撑，并在各平台有参考实现
