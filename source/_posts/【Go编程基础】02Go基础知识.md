@@ -1,7 +1,6 @@
 ---
 title: 【Go编程基础】02Go基础知识
 date: 2022-05-13 12:44:13
-cover: https://cdn.clang.asia/blog/cover.jpg
 categories: Golang
 tags: [Golang]
 ---

@@ -1,7 +1,6 @@
 ---
 title: iOS协议
 date: 2016-05-17 20:04:29
-cover: https://cdn.clang.asia/blog/cover.jpg
 categories: iOS
 tags: [iOS]
 ---

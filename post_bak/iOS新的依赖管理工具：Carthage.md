@@ -1,7 +1,6 @@
 ---
 title: iOS新的依赖管理工具：Carthage
 date: 2016-06-21 14:05:24
-cover: https://cdn.clang.asia/blog/cover.jpg
 categories: iOS
 tags: [iOS]
 ---

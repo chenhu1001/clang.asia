@@ -1,7 +1,6 @@
 ---
 title: Spring Cloud Gateway实现指定路由跳过全局过滤器
 date: 2022-04-25 09:49:14
-cover: https://cdn.clang.asia/blog/cover.jpg
 categories: Java
 tags: [Java,Spring Cloud,Spring Cloud Gateway]
 ---

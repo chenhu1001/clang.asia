@@ -122,15 +122,34 @@ category_per_img:
 
 cover:
   # display the cover or not (是否顯示文章封面)
-  index_enable: false
-  aside_enable: false
-  archives_enable: false
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
   # the position of cover in home page (封面顯示的位置)
   # left/right/both
-  position: both
+  position: left
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
-  default_cover:
-    # - https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg
+  default_cover: # https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg
+     - https://cdn.clang.asia/blog/material/material_1.png
+     - https://cdn.clang.asia/blog/material/material_2.png
+     - https://cdn.clang.asia/blog/material/material_3.png
+     - https://cdn.clang.asia/blog/material/material_4.png
+     - https://cdn.clang.asia/blog/material/material_5.png
+     - https://cdn.clang.asia/blog/material/material_6.png
+     - https://cdn.clang.asia/blog/material/material_7.png
+     - https://cdn.clang.asia/blog/material/material_8.png
+     - https://cdn.clang.asia/blog/material/material_9.png
+     - https://cdn.clang.asia/blog/material/material_10.png
+     - https://cdn.clang.asia/blog/material/material_11.jpg
+     - https://cdn.clang.asia/blog/material/material_12.jpg
+     - https://cdn.clang.asia/blog/material/material_13.jpg
+     - https://cdn.clang.asia/blog/material/material_14.jpg
+     - https://cdn.clang.asia/blog/material/material_15.jpg
+     - https://cdn.clang.asia/blog/material/material_16.jpg
+     - https://cdn.clang.asia/blog/material/material_17.png
+     - https://cdn.clang.asia/blog/material/material_18.png
+     - https://cdn.clang.asia/blog/material/material_19.png
+     - https://cdn.clang.asia/blog/material/material_20.png
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:

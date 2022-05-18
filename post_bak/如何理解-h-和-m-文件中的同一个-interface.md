@@ -1,7 +1,6 @@
 ---
 title: 如何理解.h 和 .m 文件中的同一个@interface
 date: 2016-05-17 20:04:46
-cover: https://cdn.clang.asia/blog/cover.jpg
 categories: iOS
 tags: [iOS]
 ---

@@ -1,7 +1,6 @@
 ---
 title: 自定义Spring Cache的key
 date: 2019-06-22 15:38:10
-cover: https://cdn.clang.asia/blog/cover.jpg
 categories: Java
 tags: [Java,Spring Cache]
 ---

@@ -1,7 +1,6 @@
 ---
 title: Spring Boot集成Mybatis实现多数据源支持
 date: 2022-04-21 15:26:34
-cover: https://cdn.clang.asia/blog/cover.jpg
 categories: Java
 tags: [Java,Spring Boot,Mybatis]
 ---

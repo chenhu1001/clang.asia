@@ -1,7 +1,6 @@
 ---
 title: Golang实现文件接收  
 date: 2020-07-11 15:39:24
-cover: https://cdn.clang.asia/blog/cover.jpg
 categories: Golang
 tags: [Golang]
 ---

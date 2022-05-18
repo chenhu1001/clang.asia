@@ -1,7 +1,6 @@
 ---
 title: iOS播放动态gif图片
 date: 2016-05-17 20:03:49
-cover: https://cdn.clang.asia/blog/cover.jpg
 categories: iOS
 tags: [iOS]
 ---

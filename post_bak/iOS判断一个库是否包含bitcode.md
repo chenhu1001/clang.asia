@@ -1,7 +1,6 @@
 ---
 title: iOS判断一个库是否包含bitcode
 date: 2016-05-17 20:03:41
-cover: https://cdn.clang.asia/blog/cover.jpg
 categories: iOS
 tags: [iOS]
 ---

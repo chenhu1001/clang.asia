@@ -1,7 +1,6 @@
 ---
 title: iOS直播技术分享-音频编码（二）
 date: 2016-07-11 14:06:35
-cover: https://cdn.clang.asia/blog/cover.jpg
 categories: 音视频
 tags: [音视频,iOS]
 ---

@@ -1,7 +1,6 @@
 ---
 title: 【Go编程基础】01Go开发环境搭建
 date: 2022-05-07 17:56:52
-cover: https://cdn.clang.asia/blog/cover.jpg
 categories: Golang
 tags: [Golang]
 ---

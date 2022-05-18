@@ -1,7 +1,6 @@
 ---
 title: Github+Hexo搭建免费个人博客
 date: 2016-06-10 14:03:28
-cover: https://cdn.clang.asia/blog/cover.jpg
 categories: 随笔
 tags: [随笔,Github,Hexo]
 ---

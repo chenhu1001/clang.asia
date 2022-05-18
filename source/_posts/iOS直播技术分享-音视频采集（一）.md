@@ -1,7 +1,6 @@
 ---
 title: iOS直播技术分享-音视频采集（一）
 date: 2016-07-02 14:06:16
-cover: https://cdn.clang.asia/blog/cover.jpg
 categories: 音视频
 tags: [音视频,iOS]
 ---

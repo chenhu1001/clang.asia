@@ -1,7 +1,6 @@
 ---
 title: macOS下如何编译FFmpeg for macOS APP
 date: 2017-08-11 14:39:15
-cover: https://cdn.clang.asia/blog/cover.jpg
 categories: 音视频
 tags: [音视频,macOS,FFmpeg]
 ---

@@ -1,7 +1,6 @@
 ---
 title: iOS直播技术分享-视频编码（三）
 date: 2016-07-11 14:06:46
-cover: https://cdn.clang.asia/blog/cover.jpg
 categories: 音视频
 tags: [音视频,iOS]
 ---
