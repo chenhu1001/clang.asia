@@ -438,7 +438,7 @@ baidu_analytics: fd1f2eae75bb4a079b4b9730ab6f647d
 
 # Google Analytics
 # https://analytics.google.com/analytics/web/
-google_analytics: # G-NJP2QJBR4D
+google_analytics: G-NJP2QJBR4D
 
 # CNZZ Analytics
 # https://www.umeng.com/
