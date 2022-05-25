@@ -425,7 +425,7 @@ crisp:
 footer:
   owner:
     enable: true
-    since: 2020
+    since: 2016
   custom_text: <a href="https://beian.miit.gov.cn/"><span>蜀ICP备2021023775号</span></a>
   copyright: true # Copyright of theme and framework
 
