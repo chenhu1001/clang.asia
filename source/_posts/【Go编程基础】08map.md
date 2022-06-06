@@ -97,7 +97,48 @@ map[1:OK]
 [map[1:OK] map[1:OK] map[1:OK] map[1:OK] map[1:OK]]
 ```
 
+```go
+// 间接用slice进行map的排序
+func main() {
+	m := map[int]string{3: "c", 1: "a", 4: "d", 5: "e", 2: "b"}
+	s := make([]int, len(m))
+	i := 0
+	for k, _ := range m {
+		s[i] = k
+		i++
+	}
+	sort.Ints(s)
+	fmt.Println(s)
+
+	for _, v := range s {
+		fmt.Println(m[v])
+	}
+}
+
+输出：
+[1 2 3 4 5]
+a
+b
+c
+d
+e
+```
+
 ## 思考问题
-- 根据在 for range 部分讲解的知识，尝试将类型为map[int]string
-的键和值进行交换，变成类型map[string]int
-- 程序正确运行后应输出如下结果：
+- 根据在 for range 部分讲解的知识，尝试将类型为map[int]string的键和值进行交换，变成类型map[string]int
+
+```go
+func main() {
+	m := map[int]string{3: "c", 1: "a", 4: "d", 5: "e", 2: "b"}
+	n := make(map[string]int, len(m))
+	for k, v := range m {
+		n[v] = k
+	}
+	fmt.Println(m)
+	fmt.Println(n)
+}
+
+输出：
+map[1:a 2:b 3:c 4:d 5:e]
+map[a:1 b:2 c:3 d:4 e:5]
+```
