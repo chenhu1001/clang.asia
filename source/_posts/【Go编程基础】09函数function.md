@@ -155,7 +155,7 @@ c
 b
 ```
 
-```gho
+```go
 func main() {
 	for i := 0; i < 3; i++ {
 		defer fmt.Println(i)
