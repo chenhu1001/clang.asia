@@ -12,5 +12,55 @@ tags: [Golang]
 即 pointer-interface
 - 通过反射可以“动态”调用方法
 
+```go
+type User struct {
+	Id int
+	Name string
+	Age int
+}
+
+func (u User) Hello() {
+	fmt.Println("Hello world.")
+}
+
+func main() {
+	u := User{1, "OK", 18}
+	Info(u)
+}
+
+func Info(o interface{}) {
+	t := reflect.TypeOf(o)
+	fmt.Println("Type:", t.Name())
+	
+	// 反射结构的判断
+	if k := t.Kind(); k != reflect.Struct {
+		fmt.Println("XX")
+		return
+	}
+
+	v := reflect.ValueOf(o)
+	fmt.Println("Fields")
+
+	for i := 0; i < t.NumField(); i++ {
+		f := t.Field(i)
+		val := v.Field(i).Interface()
+		fmt.Printf("%6s: %v = %v\n", f.Name, f.Type, val)
+	}
+	
+	for i := 0; i < t.NumMethod(); i++ {
+		m := t.Method(i)
+		fmt.Printf("%6s: %v\n", m.Name, m.Type)
+	}
+}
+
+输出：
+Type: User
+Fields
+    Id: int = 1
+  Name: string = OK
+   Age: int = 18
+ Hello: func(main.User)
+```
+
 # 思考问题
 - 定义一个结构，通过反射来打印其信息，并调用方法。
