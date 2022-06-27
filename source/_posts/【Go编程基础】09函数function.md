@@ -1,5 +1,5 @@
 ---
-title: "【Go编程基础】09函数function"
+title: "【Go编程基础】09-函数function"
 date: 2022-06-25T12:13:56+08:00
 categories: ["Golang"]
 tags: [Golang]

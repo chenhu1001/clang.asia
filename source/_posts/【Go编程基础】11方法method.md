@@ -1,5 +1,5 @@
 ---
-title: "【Go编程基础】11方法method"
+title: "【Go编程基础】11-方法method"
 date: 2022-06-26T16:32:22+08:00
 categories: ["Golang"]
 tags: [Golang]

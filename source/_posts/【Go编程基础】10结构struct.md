@@ -1,5 +1,5 @@
 ---
-title: "【Go编程基础】10结构struct"
+title: "【Go编程基础】10-结构struct"
 date: 2022-06-26T09:32:17+08:00
 categories: ["Golang"]
 tags: [Golang]

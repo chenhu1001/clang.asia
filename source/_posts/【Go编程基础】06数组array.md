@@ -1,5 +1,5 @@
 ---
-title: "【Go编程基础】06数组array"
+title: "【Go编程基础】06-数组array"
 date: 2022-05-27T22:40:51+08:00
 categories: ["Golang"]
 tags: [Golang]

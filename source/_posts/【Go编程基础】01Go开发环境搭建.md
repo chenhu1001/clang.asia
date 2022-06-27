@@ -1,5 +1,5 @@
 ---
-title: 【Go编程基础】01Go开发环境搭建
+title: 【Go编程基础】01-Go开发环境搭建
 date: 2022-05-07 17:56:52
 categories: Golang
 tags: [Golang]

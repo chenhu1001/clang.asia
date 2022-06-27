@@ -1,5 +1,5 @@
 ---
-title: "【Go编程基础】07切片slice"
+title: "【Go编程基础】07-切片slice"
 date: 2022-06-05T17:20:41+08:00
 categories: ["Golang"]
 tags: [Golang]
