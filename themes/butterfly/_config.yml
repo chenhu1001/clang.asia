@@ -539,7 +539,7 @@ canvas_ribbon:
   size: 150
   alpha: 0.6
   zIndex: -1
-  click_to_change: false
+  click_to_change: true
   mobile: true
 
 # Fluttering Ribbon (動態彩帶)
