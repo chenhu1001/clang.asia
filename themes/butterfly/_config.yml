@@ -540,12 +540,12 @@ canvas_ribbon:
   alpha: 0.6
   zIndex: -1
   click_to_change: false
-  mobile: false
+  mobile: true
 
 # Fluttering Ribbon (動態彩帶)
 canvas_fluttering_ribbon:
-  enable: true
-  mobile: true
+  enable: false
+  mobile: false
 
 # canvas_nest
 # https://github.com/hustcc/canvas-nest.js
