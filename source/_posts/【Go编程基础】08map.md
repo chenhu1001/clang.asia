@@ -1,8 +1,8 @@
 ---
 title: "【Go编程基础】08-map"
 date: 2022-06-05T21:31:36+08:00
-categories: ["Golang"]
-tags: [Golang]
+categories: ["Go"]
+tags: [Go]
 ---
 ## map
 - 类似其它语言中的哈希表或者字典，以key-value形式存储数据

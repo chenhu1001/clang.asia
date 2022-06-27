@@ -1,8 +1,8 @@
 ---
 title: "【Go编程基础】09-函数function"
 date: 2022-06-25T12:13:56+08:00
-categories: ["Golang"]
-tags: [Golang]
+categories: ["Go"]
+tags: [Go]
 ---
 ## 函数function
 - Go 函数 不支持 嵌套、重载和默认参数

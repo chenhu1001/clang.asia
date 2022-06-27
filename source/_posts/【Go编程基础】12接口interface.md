@@ -1,8 +1,8 @@
 ---
 title: "【Go编程基础】12-接口interface"
 date: 2022-06-26T21:32:16+08:00
-categories: ["Golang"]
-tags: [Golang]
+categories: ["Go"]
+tags: [Go]
 ---
 # 接口interface
 - 接口是一个或多个方法签名的集合

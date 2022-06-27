@@ -1,8 +1,8 @@
 ---
 title: "【Go编程基础】06-数组array"
 date: 2022-05-27T22:40:51+08:00
-categories: ["Golang"]
-tags: [Golang]
+categories: ["Go"]
+tags: [Go]
 ---
 ## 数组Array
 - 定义数组的格式：var <varName> [n]<type>，n>=0

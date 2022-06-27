@@ -1,8 +1,8 @@
 ---
 title: "【Go编程基础】13-反射reflection"
 date: 2022-04-28T14:32:30+08:00
-categories: ["Golang"]
-tags: [Golang]
+categories: ["Go"]
+tags: [Go]
 ---
 # 反射reflection
 - 反射可大大提高程序的灵活性，使得 interface{} 有更大的发挥余地

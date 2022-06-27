@@ -1,8 +1,8 @@
 ---
 title: 【Go编程基础】02-Go基础知识
 date: 2022-05-13 12:44:13
-categories: Golang
-tags: [Golang]
+categories: Go
+tags: [Go]
 ---
 ## Go内置关键字（25个均为小写）
 | break        | default           |  func        | interface        | select|

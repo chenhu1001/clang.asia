@@ -1,8 +1,8 @@
 ---
 title: "【Go编程基础】14-并发concurrency"
 date: 2022-04-28T14:32:34+08:00
-categories: ["Golang"]
-tags: [Golang]
+categories: ["Go"]
+tags: [Go]
 ---
 # 并发concurrency
 - 很多人都是冲着 Go 大肆宣扬的高并发而忍不住跃跃欲试，但其实从

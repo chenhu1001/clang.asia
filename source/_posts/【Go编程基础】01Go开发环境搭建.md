@@ -1,8 +1,8 @@
 ---
 title: 【Go编程基础】01-Go开发环境搭建
 date: 2022-05-07 17:56:52
-categories: Golang
-tags: [Golang]
+categories: Go
+tags: [Go]
 ---
 ## 什么是Go？
 Go是一门并发支持 、垃圾回收的编译型 系统编程语言，旨在创造一门具有在静态编译语言的 高性能 和动态语言的 高效开发 之间拥有良好平衡点的一门编程语言。

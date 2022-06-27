@@ -1,8 +1,8 @@
 ---
 title: "【Go编程基础】10-结构struct"
 date: 2022-06-26T09:32:17+08:00
-categories: ["Golang"]
-tags: [Golang]
+categories: ["Go"]
+tags: [Go]
 ---
 # 结构struct
 - Go 中的struct与C中的struct非常相似，并且Go没有class

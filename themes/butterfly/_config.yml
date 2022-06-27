@@ -9,7 +9,7 @@ menu:
 #   标签: /tags/ || fas fa-tags
    后端||fas fa-list:
       Java: /categories/Java || fas fa-compass
-      Golang: /categories/Golang || fas fa-cloud
+      Go: /categories/Go || fas fa-cloud
    前端: /categories/前端 || fas fa-code
    音视频: /categories/音视频 || fas fa-video-camera
    分享: /categories/分享 || fas fa-share

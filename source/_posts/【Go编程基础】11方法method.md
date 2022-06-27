@@ -1,8 +1,8 @@
 ---
 title: "【Go编程基础】11-方法method"
 date: 2022-06-26T16:32:22+08:00
-categories: ["Golang"]
-tags: [Golang]
+categories: ["Go"]
+tags: [Go]
 ---
 # 方法method
 - Go 中虽没有class，但依旧有method
