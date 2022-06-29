@@ -15,6 +15,33 @@ goroutine 的简单易用，也在语言层面上给予了开发者巨大的便�
 的能力。
 - Goroutine 奉行通过通信来共享内存，而不是共享内存来通信。
 
+```go
+func main() {
+	go Go()
+	// time.Sleep(2 * time.Second)
+}
+
+func Go() {
+	fmt.Println("Go Go Go!")
+}
+
+没有输出，因为主线程已经退出了
+```
+
+```go
+func main() {
+	go Go()
+	// 利用延迟等待线程打印输出
+	time.Sleep(2 * time.Second)
+}
+
+func Go() {
+	fmt.Println("Go Go Go!")
+}
+
+输出：
+Go Go Go!
+```
 # Channel
 - Channel 是 goroutine 沟通的桥梁，大都是阻塞同步的
 - 通过 make 创建，close 关闭
@@ -23,11 +50,264 @@ goroutine 的简单易用，也在语言层面上给予了开发者巨大的便�
 - 可以设置单向或双向通道
 - 可以设置缓存大小，在未被填满前不会发生阻塞
 
+```go
+func main() {
+	// 是go一种特殊的数据类型，有点像Linux系统中的管道/消息队列
+	c := make(chan bool)
+	go func() {
+		fmt.Println("Go Go Go!")
+		c <- true
+	}()
+	// 等待从通道里读取值
+	<-c
+}
+```
+
+```go
+func main() {
+	c := make(chan bool)
+	go func() {
+		fmt.Println("Go Go Go!")
+		c <- true
+		close(c)
+	}()
+	// 可以使用for range来迭代不断操作channel，直到关闭channel
+	for v := range c {
+		fmt.Println(v)
+	}
+}
+```
+
+```go
+func main() {
+    // 有缓存的channel，非阻塞的，不会输出
+	c := make(chan bool, 1)
+	go func() {
+		fmt.Println("Go Go Go!")
+		<-c
+	}()
+	c <- true
+}
+
+func main() {
+    // 无缓存的channel是阻塞的，输出：Go Go Go!
+	c := make(chan bool)
+	go func() {
+		fmt.Println("Go Go Go!")
+		<-c
+	}()
+	c <- true
+}
+```
+
+```go
+// 在多线程情况下，程序不是顺序执行，index=9的执行完不代表所有都执行问
+func main() {
+	runtime.GOMAXPROCS(runtime.NumCPU())
+	c := make(chan bool)
+	for i := 0; i < 10; i++ {
+		go Go(c, i)
+	}
+	<-c
+}
+
+func Go(c chan bool, index int) {
+	a := 1
+	for i := 0; i < 100000000; i++ {
+		a += i
+	}
+	fmt.Println(index, a)
+
+	if index == 9 {
+		c <- true
+	}
+}
+
+输出（每次都会不同）：
+0 4999999950000001
+3 4999999950000001
+1 4999999950000001
+2 4999999950000001
+6 4999999950000001
+7 4999999950000001
+9 4999999950000001
+```
+
+```go
+// 解决上面多线程不能判断都执行完，通过创建带缓存区的channel来解决
+func main() {
+	runtime.GOMAXPROCS(runtime.NumCPU())
+	c := make(chan bool, 10)
+	for i := 0; i < 10; i++ {
+		go Go(c, i)
+	}
+	for i := 0; i < 10; i++ {
+		<-c
+	}
+}
+
+func Go(c chan bool, index int) {
+	a := 1
+	for i := 0; i < 100000000; i++ {
+		a += i
+	}
+	fmt.Println(index, a)
+
+	c <- true
+}
+
+输出（每次都能输出10个）：
+4 4999999950000001
+0 4999999950000001
+6 4999999950000001
+9 4999999950000001
+1 4999999950000001
+7 4999999950000001
+8 4999999950000001
+5 4999999950000001
+2 4999999950000001
+3 4999999950000001
+```
+
+```
+// 多线程协作通过同步包来实现
+func main() {
+	runtime.GOMAXPROCS(runtime.NumCPU())
+	wg := sync.WaitGroup{}
+	wg.Add(10)
+	for i := 0; i < 10; i++ {
+		go Go(&wg, i)
+	}
+	wg.Wait()
+}
+
+func Go(wg *sync.WaitGroup, index int) {
+	a := 1
+	for i := 0; i < 100000000; i++ {
+		a += i
+	}
+	fmt.Println(index, a)
+
+	wg.Done()
+}
+```
+
 # Select
 - 可处理一个或多个 channel 的发送与接收
 - 同时有多个可用的 channel时按随机顺序处理
 - 可用空的 select 来阻塞 main 函数
 - 可设置超时
+
+```go
+func main() {
+	c1, c2 := make(chan int), make(chan string)
+	go func() {
+		for {
+			select {
+			case v, ok := <-c1:
+				if !ok {
+					break
+				}
+				fmt.Println("c1", v)
+			case v, ok := <-c2:
+				if !ok {
+					break
+				}
+				fmt.Println("c2", v)
+			}
+		}
+	}()
+
+	c1 <- 1
+	c2 <- "hi"
+	c1 <- 3
+	c2 <- "hello"
+
+	close(c1)
+	close(c2)
+}
+
+输出：
+c1 1
+c2 hi
+c1 3
+c2 hello
+```
+
+```go
+// c1、c2有一个关闭程序就会退出
+func main() {
+	c1, c2 := make(chan int), make(chan string)
+	o := make(chan bool)
+	go func() {
+		for {
+			select {
+			case v, ok := <-c1:
+				if !ok {
+					o <- true
+					break
+				}
+				fmt.Println("c1", v)
+			case v, ok := <-c2:
+				if !ok {
+					o <- true
+					break
+				}
+				fmt.Println("c2", v)
+			}
+		}
+	}()
+
+	c1 <- 1
+	c2 <- "hi"
+	c1 <- 3
+	c2 <- "hello"
+
+	close(c1)
+	close(c2)
+
+	<-o
+}
+```
+
+```go
+// 两个都关闭才退出
+func main() {
+	c1, c2 := make(chan int), make(chan string)
+	o := make(chan bool, 2)
+	go func() {
+		for {
+			select {
+			// 需要确保c1关闭之后不重复读取
+			case v, ok := <-c1:
+				if !ok {
+					o <- true
+					break
+				}
+				fmt.Println("c1", v)
+			case v, ok := <-c2:
+				if !ok {
+					o <- true
+					break
+				}
+				fmt.Println("c2", v)
+			}
+		}
+	}()
+
+	c1 <- 1
+	c2 <- "hi"
+	c1 <- 3
+	c2 <- "hello"
+
+	close(c1)
+	close(c2)
+
+	for i := 0; i < 2; i++ {
+		<-o
+	}
+}
+```
 
 # 思考问题
 - 创建一个 goroutine，与主线程按顺序相互发送信息若干次并打印
