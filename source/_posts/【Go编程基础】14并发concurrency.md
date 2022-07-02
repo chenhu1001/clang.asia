@@ -1,6 +1,6 @@
 ---
 title: "【Go编程基础】14-并发concurrency"
-date: 2022-04-28T14:32:34+08:00
+date: 2022-07-02T18:12:19+08:00
 categories: ["Go"]
 tags: [Go]
 ---
@@ -236,6 +236,7 @@ c2 hello
 
 ```go
 // c1、c2有一个关闭程序就会退出
+// 两个都关闭才退出是不可行的，我们只有对其中一个进行判断
 func main() {
 	c1, c2 := make(chan int), make(chan string)
 	o := make(chan bool)
@@ -268,46 +269,110 @@ func main() {
 
 	<-o
 }
+
+输出：
+c1 1
+c2 hi
+c1 3
+c2 hello
 ```
 
 ```go
-// 两个都关闭才退出
+// 通过select来作为一个发送者的应用
 func main() {
-	c1, c2 := make(chan int), make(chan string)
-	o := make(chan bool, 2)
+	c := make(chan int)
 	go func() {
-		for {
-			select {
-			// 需要确保c1关闭之后不重复读取
-			case v, ok := <-c1:
-				if !ok {
-					o <- true
-					break
-				}
-				fmt.Println("c1", v)
-			case v, ok := <-c2:
-				if !ok {
-					o <- true
-					break
-				}
-				fmt.Println("c2", v)
-			}
+		for v := range c {
+			fmt.Println(v)
 		}
 	}()
 
-	c1 <- 1
-	c2 <- "hi"
-	c1 <- 3
-	c2 <- "hello"
-
-	close(c1)
-	close(c2)
-
-	for i := 0; i < 2; i++ {
-		<-o
+	for {
+		select {
+		case c <- 0:
+		case c <- 1:
+		}
 	}
 }
+
+输出：
+0
+1
+1
+1
+0
+1
+1
+1
+0
+0
+0
+1
+.
+.
+.
 ```
+
+```go
+// 可设置Select超时
+func main() {
+	c := make(chan bool)
+	select {
+	case v := <-c:
+		fmt.Println(v)
+	case <-time.After(3 * time.Second):
+		fmt.Println("Timeout")
+	}
+}
+
+输出：
+Timeout
+```
+
 
 # 思考问题
 - 创建一个 goroutine，与主线程按顺序相互发送信息若干次并打印
+
+```
+var c chan string
+
+func Pingpong() {
+	i := 0
+	for {
+		fmt.Println(<-c)
+		c <- fmt.Sprintf("From Pingpong: Hi, #%d", i)
+		i++
+	}
+}
+
+func main() {
+	c = make(chan string)
+	go Pingpong()
+	for i := 0; i < 10; i++ {
+		c <- fmt.Sprintf("From main: Hello, #%d", i)
+		fmt.Println(<-c)
+	}
+}
+
+输出：
+From main: Hello, #0
+From Pingpong: Hi, #0
+From main: Hello, #1
+From Pingpong: Hi, #1
+From main: Hello, #2
+From Pingpong: Hi, #2
+From main: Hello, #3
+From Pingpong: Hi, #3
+From main: Hello, #4
+From Pingpong: Hi, #4
+From main: Hello, #5
+From Pingpong: Hi, #5
+From main: Hello, #6
+From Pingpong: Hi, #6
+From main: Hello, #7
+From Pingpong: Hi, #7
+From main: Hello, #8
+From Pingpong: Hi, #8
+From main: Hello, #9
+From Pingpong: Hi, #9
+```
