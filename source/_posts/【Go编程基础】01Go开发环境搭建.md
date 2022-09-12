@@ -39,7 +39,7 @@ Go在谷歌：以软件工程为目的的语言设计
 - 第三方工具安装
 
 ## Go环境变量与工作目录
-![在这里插入图片描述](https://cdn.clang.asia/blog/2022/%E3%80%90Go%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80%E3%80%9101Go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_1.png-watermark)
+![在这里插入图片描述](https://clang.oss-cn-shenzhen.aliyuncs.com/blog/2022/%E3%80%90Go%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80%E3%80%9101Go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_1.png-watermark)
 
 根据约定，GOPATH下需要建立3个目录：
 - bin（存放编译后生成的可执行文件）
@@ -57,7 +57,7 @@ Go在谷歌：以软件工程为目的的语言设计
 - go doc：查看文档
 
 ## 程序的整体结构
-![在这里插入图片描述](https://cdn.clang.asia/blog/2022/%E3%80%90Go%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80%E3%80%9101Go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_2.png-watermark)
+![在这里插入图片描述](https://clang.oss-cn-shenzhen.aliyuncs.com/blog/2022/%E3%80%90Go%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80%E3%80%9101Go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_2.png-watermark)
 
 ## Go语言版"Hello world!"
 

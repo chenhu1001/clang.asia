@@ -63,7 +63,7 @@ func main() {
 ```
 
 ## Slice与底层数组的对应关系
-![](https://cdn.clang.asia/blog/2022/%E3%80%90Go%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80%E3%80%9107%E5%88%87%E7%89%87slice_1.png-watermark)
+![](https://clang.oss-cn-shenzhen.aliyuncs.com/blog/2022/%E3%80%90Go%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80%E3%80%9107%E5%88%87%E7%89%87slice_1.png-watermark)
 
 ```go
 func main() {

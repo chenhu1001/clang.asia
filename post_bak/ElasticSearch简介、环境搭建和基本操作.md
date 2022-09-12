@@ -15,13 +15,13 @@ Elasticsearch是用Java开发并且是当前最流行的开源的企业级搜索
 
 创始人:Shay Banon（谢巴农）
 
-![](https://cdn.clang.asia/blog/2022/ElasticSearch%E7%AE%80%E4%BB%8B%E3%80%81%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C_1.png-watermark)
+![](https://clang.oss-cn-shenzhen.aliyuncs.com/blog/2022/ElasticSearch%E7%AE%80%E4%BB%8B%E3%80%81%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C_1.png-watermark)
 
 应用场景
 
-![](https://cdn.clang.asia/blog/2022/ElasticSearch%E7%AE%80%E4%BB%8B%E3%80%81%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C_2.png-watermark)
+![](https://clang.oss-cn-shenzhen.aliyuncs.com/blog/2022/ElasticSearch%E7%AE%80%E4%BB%8B%E3%80%81%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C_2.png-watermark)
 
-![](https://cdn.clang.asia/blog/2022/ElasticSearch%E7%AE%80%E4%BB%8B%E3%80%81%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C_3.png-watermark)
+![](https://clang.oss-cn-shenzhen.aliyuncs.com/blog/2022/ElasticSearch%E7%AE%80%E4%BB%8B%E3%80%81%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C_3.png-watermark)
 
 ## ElasticSearch与Lucene的关系
 Lucene可以被认为是迄今为止最先进、性能最好的、功能最全的搜索引擎库（框架）  
@@ -56,15 +56,15 @@ Lucene缺点：
 ### ES vs Solr 检索速度
 当单纯的对已有数据进行搜索时，Solr更快。
 
-![](https://cdn.clang.asia/blog/2022/ElasticSearch%E7%AE%80%E4%BB%8B%E3%80%81%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C_4.png-watermark)
+![](https://clang.oss-cn-shenzhen.aliyuncs.com/blog/2022/ElasticSearch%E7%AE%80%E4%BB%8B%E3%80%81%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C_4.png-watermark)
 
 当实时建立索引时, Solr会产生io阻塞，查询性能较差, Elasticsearch具有明显的优势。
 
-![](https://cdn.clang.asia/blog/2022/ElasticSearch%E7%AE%80%E4%BB%8B%E3%80%81%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C_5.png-watermark)
+![](https://clang.oss-cn-shenzhen.aliyuncs.com/blog/2022/ElasticSearch%E7%AE%80%E4%BB%8B%E3%80%81%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C_5.png-watermark)
 
 大型互联网公司，实际生产环境测试，将搜索引擎从Solr转到 Elasticsearch以后的平均查询速度有了50倍的提升。
 
-![](https://cdn.clang.asia/blog/2022/ElasticSearch%E7%AE%80%E4%BB%8B%E3%80%81%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C_6.png-watermark)
+![](https://clang.oss-cn-shenzhen.aliyuncs.com/blog/2022/ElasticSearch%E7%AE%80%E4%BB%8B%E3%80%81%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C_6.png-watermark)
 
 总结：  
 二者安装都很简单。  
@@ -75,7 +75,7 @@ Lucene缺点：
 
 ### ES vs 关系型数据库
 
-![](https://cdn.clang.asia/blog/2022/ElasticSearch%E7%AE%80%E4%BB%8B%E3%80%81%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C_7.png-watermark)
+![](https://clang.oss-cn-shenzhen.aliyuncs.com/blog/2022/ElasticSearch%E7%AE%80%E4%BB%8B%E3%80%81%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C_7.png-watermark)
 
 # Lucene全文检索框架
 ## 什么是全文检索
@@ -87,11 +87,11 @@ hello   what  world    ====>   hello 和 what 和 world
 
 ## 分词原理之倒排索引
 
-![](https://cdn.clang.asia/blog/2022/ElasticSearch%E7%AE%80%E4%BB%8B%E3%80%81%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C_8.png-watermark)
+![](https://clang.oss-cn-shenzhen.aliyuncs.com/blog/2022/ElasticSearch%E7%AE%80%E4%BB%8B%E3%80%81%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C_8.png-watermark)
 
-![](https://cdn.clang.asia/blog/2022/ElasticSearch%E7%AE%80%E4%BB%8B%E3%80%81%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C_9.png-watermark)
+![](https://clang.oss-cn-shenzhen.aliyuncs.com/blog/2022/ElasticSearch%E7%AE%80%E4%BB%8B%E3%80%81%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C_9.png-watermark)
 
-![](https://cdn.clang.asia/blog/2022/ElasticSearch%E7%AE%80%E4%BB%8B%E3%80%81%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C_10.png-watermark)
+![](https://clang.oss-cn-shenzhen.aliyuncs.com/blog/2022/ElasticSearch%E7%AE%80%E4%BB%8B%E3%80%81%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C_10.png-watermark)
 
 倒排索引总结：  
 索引就类似于目录，平时我们使用的都是索引，都是通过主键定位到某条数据，那么倒排索引呢，刚好相反，数据对应到主键．这里以一个博客文章的内容为例:  
