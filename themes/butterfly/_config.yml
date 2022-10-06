@@ -468,7 +468,7 @@ cnzz_analytics:
 
 # Cloudflare Analytics
 # https://www.cloudflare.com/zh-tw/web-analytics/
-cloudflare_analytics: fefc964a8f354bbcb65003fc5082b4a5
+cloudflare_analytics: fa1cb58cb1ec4e1f845351de70b52d1f
 
 # Microsoft Clarity
 # https://clarity.microsoft.com/
@@ -479,10 +479,10 @@ microsoft_clarity:
 
 # Google Adsense (谷歌廣告)
 google_adsense:
-  enable: false
+  enable: true
   auto_ads: true
   js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
-  client:
+  client: ca-pub-9329019376666398
   enable_page_level_ads: true
 
 # Insert ads manually (手動插入廣告)
