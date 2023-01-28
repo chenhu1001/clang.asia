@@ -21,7 +21,7 @@ tags: [Java,算法,秒杀]
 这个算法的优点是它可以平滑地处理请求，可以避免突发请求造成的服务崩溃。
 
 以下是一个基于令牌桶算法的 Java 限流代码示例：
-```
+```java
 import java.util.concurrent.Semaphore;
 
 public class RateLimiter {
