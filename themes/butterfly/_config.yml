@@ -12,6 +12,7 @@ menu:
     Go: /categories/Go || fas fa-cloud
   前端: /categories/前端 || fas fa-code
   音视频: /categories/音视频 || fas fa-video-camera
+  投资: /categories/投资 || fa-solid fa-sack-dollar
   分享: /categories/分享 || fas fa-share
   随笔: /categories/随笔 || fas fa-pencil
 #   List||fas fa-list:
@@ -623,7 +624,7 @@ beautify:
 # Global font settings
 # Don't modify the following settings unless you know how they work (非必要不要修改)
 font:
-  global-font-size:
+  global-font-size: 16px
   code-font-size:
   font-family:
   code-font-family:
