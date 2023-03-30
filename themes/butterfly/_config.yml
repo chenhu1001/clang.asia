@@ -450,6 +450,7 @@ footer:
     enable: true
     since: 2016
 #  custom_text: <a href="https://beian.miit.gov.cn/"><span>蜀ICP备2021023775号</span></a>
+  custom_text:
   copyright: true # Copyright of theme and framework
 
 # Analysis
