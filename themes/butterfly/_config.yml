@@ -123,7 +123,7 @@ category_per_img:
 
 cover:
   # display the cover or not (是否顯示文章封面)
-  index_enable: true
+  index_enable: false
   aside_enable: true
   archives_enable: true
   # the position of cover in home page (封面顯示的位置)
@@ -449,7 +449,7 @@ footer:
   owner:
     enable: true
     since: 2016
-  custom_text: <a href="https://beian.miit.gov.cn/"><span>蜀ICP备2021023775号</span></a>
+#  custom_text: <a href="https://beian.miit.gov.cn/"><span>蜀ICP备2021023775号</span></a>
   copyright: true # Copyright of theme and framework
 
 # Analysis
