@@ -2,7 +2,7 @@
 title: ARC下内存泄露总结
 date: 2016-05-17 20:04:16
 categories: iOS
-tags: [iOS]
+tags: [iOS1]
 ---
 ## 1、Block的循环引用
 在iOS4.2时，Apple推出ARC内存管理机制。这是一种编译期的内存管理方式，在编译期间，编译器会判断对象的引用情况，并在合适的位置加上retain和release，使得对象的内存被合理的管理。所以，从本质上说ARC和MRC在本质上是一样的，都是通过引用计数的内存管理方式。  
