@@ -123,12 +123,12 @@ category_per_img:
 
 cover:
   # display the cover or not (是否顯示文章封面)
-  index_enable: false
+  index_enable: true
   aside_enable: true
   archives_enable: true
   # the position of cover in home page (封面顯示的位置)
   # left/right/both
-  position: left
+  position: both
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
   default_cover: # https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg
     - https://clang.oss-cn-shenzhen.aliyuncs.com/blog/material/material_1.png
@@ -449,7 +449,6 @@ footer:
   owner:
     enable: true
     since: 2016
-#  custom_text: <a href="https://beian.miit.gov.cn/"><span>蜀ICP备2021023775号</span></a>
   custom_text:
   copyright: true # Copyright of theme and framework
 
@@ -625,7 +624,7 @@ beautify:
 # Global font settings
 # Don't modify the following settings unless you know how they work (非必要不要修改)
 font:
-  global-font-size: 16px
+  global-font-size: 15px
   code-font-size:
   font-family:
   code-font-family:
@@ -856,7 +855,7 @@ pangu:
 # Lazyload (圖片懶加載)
 # https://github.com/verlok/vanilla-lazyload
 lazyload:
-  enable: false
+  enable: true
   field: site # site/post
   placeholder:
   blur: false
