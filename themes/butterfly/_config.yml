@@ -14,8 +14,8 @@ menu:
   前端: /categories/前端 || fas fa-code
   音视频: /categories/音视频 || fas fa-video-camera
   投资: /categories/投资 || fa-solid fa-sack-dollar
-  分享: /categories/分享 || fas fa-share
   随笔: /categories/随笔 || fas fa-pencil
+  分享: /categories/分享 || fas fa-share
 #   List||fas fa-list:
 #     Music: /music/ || fas fa-music
 #     Movie: /movies/ || fas fa-video
