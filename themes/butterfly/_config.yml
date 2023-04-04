@@ -7,7 +7,7 @@ menu:
   归档: /archives/ || fas fa-archive
   #   分类: /categories/ || fas fa-folder-open
   #   标签: /tags/ || fas fa-tags
-  AI: /categories/AI || fas fa-microchip-ai
+  AI: /categories/AI || fas fa-brain
   后端||fas fa-list:
     Java: /categories/Java || fas fa-compass
     Go: /categories/Go || fas fa-cloud
