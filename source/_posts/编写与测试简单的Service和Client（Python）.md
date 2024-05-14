@@ -24,7 +24,7 @@ tags: [ROS]
 
 在 catkin_ws/src/ 目录下新建功能包 service_example，并在创建时显式的指明依赖 rospy 和 std_msgs，依赖 std_msgs 将作为基本数据类型用于定义我们的服务类型。打开命令行终端，输入命令：
 
-```java
+```
 $ cd ~/catkin_ws/src
 
 # 创建功能包 topic_example 时，显式的指明依赖 rospy 和 std_msgs，
@@ -46,7 +46,7 @@ srv 文件分为请求和响应两部分，由 '---' 分隔。
 
 在功能包 service_example 目录下新建 srv 目录，然后在 service_example/srv/ 目录中创建 AddTwoInts.srv 文件
 
-```java
+```
 int64 a
 int64 b
 ---
@@ -61,7 +61,7 @@ srv 文件被转换成为 C++，Python 和其他语言的源代码：
 
 查看 `package.xml`, 确保它包含一下两条语句:
 
-```java
+```
 <build_depend>message_generation</build_depend>
 <exec_depend>message_runtime</exec_depend>
 ```
@@ -74,7 +74,7 @@ srv 文件被转换成为 C++，Python 和其他语言的源代码：
 
 打开功能包中的 CMakeLists.txt 文件，利用 find_packag 函数，增加对 `message_generation` 的依赖，这样就可以生成消息了。 你可以直接在 `COMPONENTS` 的列表里增加 `message_generation`，就像这样：
 
-```java
+```
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
@@ -89,7 +89,7 @@ find_package(catkin REQUIRED COMPONENTS
 
 找到如下代码块:
 
-```java
+```
 # add_service_files(
 #   FILES
 #   Service1.srv
@@ -99,7 +99,7 @@ find_package(catkin REQUIRED COMPONENTS
 
 用你自己定义的 srv 文件名（AddTwoInts.srv）替换掉那些`Service*.srv`文件，修改好后的代码如下：
 
-```java
+```
 add_service_files(
   FILES
   AddTwoInts.srv
@@ -110,7 +110,7 @@ add_service_files(
 
 在 `CMakeLists.txt` 中找到如下部分:
 
-```java
+```
 # generate_messages(
 #   DEPENDENCIES
 # #  std_msgs  # Or other packages containing msgs
@@ -119,7 +119,7 @@ add_service_files(
 
 去掉注释并附加上所有你消息文件所依赖的那些含有`.msg`文件的功能包（这个例子是依赖`std_msgs`, 不要添加 roscpp,rospy)，结果如下:
 
-```java
+```
 generate_messages(
   DEPENDENCIES
   std_msgs
@@ -132,7 +132,7 @@ generate_messages(
 
 目的：查看配置是否有问题
 
-```java
+```
 $ cd ~/catkin_ws
 $ catkin_make -DCATKIN_WHITELIST_PACKAGES="service_example"
 ```
@@ -143,7 +143,7 @@ $ catkin_make -DCATKIN_WHITELIST_PACKAGES="service_example"
 
 通过 <功能包名 / 服务类型名> 找到该服务，打开命令行终端，输入命令：
 
-```java
+```
 $ source ~/catkin_ws/devel/setup.bash
 
 $ rossrv show service_example/AddTwoInts
@@ -193,7 +193,7 @@ if __name__ == "__main__":
 
 在～/catkin_ws/src/service_example 下，让节点可执行:
 
-```java
+```
 $ chmod +x scripts/server.py
 ```
 
@@ -252,7 +252,7 @@ if __name__ == "__main__":
 
 在～/catkin_ws/src/service_example 节点可执行：
 
-```java
+```
 $ chmod +x scripts/client.py
 ```
 
@@ -260,7 +260,7 @@ $ chmod +x scripts/client.py
 
 我们可以像普通函数一样使用这个句柄并调用它：
 
-```java
+```
 resp1 = add_two_ints(x, y)
 return resp1.sum
 ```
@@ -271,7 +271,7 @@ return resp1.sum
 
 我们使用 CMake 作为构建系统，是的，即使是 Python 节点也必须使用它。这是为了确保创建消息和服务时自动生成 Python 代码。
 
-```java
+```
 $ cd ~/catkin_ws
 $ catkin_make -DCATKIN_WHITELIST_PACKAGES="service_example"
 ```
@@ -282,13 +282,13 @@ $ catkin_make -DCATKIN_WHITELIST_PACKAGES="service_example"
 
 第一步，打开一个命令行终端：
 
-```java
+```
 $ roscore
 ```
 
 第二步，打开第二个命令行终端：
 
-```java
+```
 # 用 rosrun <package_name> <node_name> 启动功能包中的发布节点。
 $ source ~/catkin_ws/devel/setup.bash    # 激活 catkin_ws 工作空间（必须有，必不可少）
 $ rosrun service_example server.py       # (python 版本)
@@ -296,7 +296,7 @@ $ rosrun service_example server.py       # (python 版本)
 
 你将看到如下的输出信息:
 
-```java
+```
 Ready to add two ints.              # Server 节点启动后的日志信息
 ```
 
@@ -306,14 +306,14 @@ Ready to add two ints.              # Server 节点启动后的日志信息
 
 打开第三个命令行客户端：
 
-```java
+```
 $ source ~/catkin_ws/devel/setup.bash     # 激活 catkin_ws 工作空间（必须有，必不可少）
 $ rosrun service_example client.py 1 3    # (Python)
 ```
 
 你将会看到如下的输出信息:
 
-```java
+```
 # Client 启动后发布服务请求，并成功接收到反馈结果
 Requesting 1+3
 1 + 3 = 4

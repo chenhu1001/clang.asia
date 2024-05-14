@@ -30,7 +30,8 @@ tags: [AI]
 
 通过这篇博客，读者可以了解到如何使用PyTorch实现一个完整的图像分类任务，并可以根据需要进行修改和扩展，以解决其他类似的计算机视觉问题。  
 以下是整个训练代码：
-```
+
+```python
 import torch
 import torch.nn as nn
 import pandas as pd
