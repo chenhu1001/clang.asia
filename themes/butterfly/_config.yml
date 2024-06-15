@@ -702,11 +702,12 @@ aside:
     button:
       enable: true
       icon: fas fa-link
-      text: 落叶随风
-      link: https://www.clang.monster
+      text: 流量卡
+      link: https://agenthk2.186.gd.cn/#/?ApiKey=EOIE1WB7BKM17E5IV6K2U3U6V93WESEQ
   card_announcement:
     enable: true
-    content: 如果尚未看到成果，那是因为付出的努力还不够多，如果尚未梦想成真，那是因为等待的时间还不够久。笑到最后的人永远最精彩，最成功，最执着。
+    # content: 如果尚未看到成果，那是因为付出的努力还不够多，如果尚未梦想成真，那是因为等待的时间还不够久。笑到最后的人永远最精彩，最成功，最执着。
+    content: 超值流量卡，资费低至极，畅享海量流量！无忧上网，尽情畅游！点击上面"流量卡"按钮即可畅享~
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
